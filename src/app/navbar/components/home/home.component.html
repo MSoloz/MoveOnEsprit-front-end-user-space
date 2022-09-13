@@ -1,0 +1,29 @@
+<body>
+
+
+  <div class="home_body">
+
+    <mat-card *ngFor="let p of posts" class="post_card">
+        <mat-card-header>
+      
+            <img alt="" mat-card-avatar src="{{apiServerUrl}}/img/{{p.creator.image}}">
+            
+          <mat-card-title>{{p.creator.lastName}} {{p.creator.firstName}}</mat-card-title>
+          <mat-card-subtitle>{{p.creator.email}}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="{{apiServerUrl}}/img/{{p.image}}" alt="Photo of a Shiba Inu">
+        <mat-card-content>
+          <p>
+             {{p.description}}
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button>Show</button>
+        </mat-card-actions>
+      </mat-card>
+
+
+</div>
+
+
+</body>

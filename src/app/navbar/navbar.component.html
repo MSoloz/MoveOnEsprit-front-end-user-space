@@ -1,0 +1,32 @@
+<mat-toolbar color="primary" class="">
+
+    <span>MoveOnEsprit</span>   
+    
+    <div class="spacer"></div>
+    
+    <a mat-button routerLink="home">Home</a>
+    <a mat-button routerLink="universities">Universities</a>
+    <a mat-button routerLink="contacts">Contacts</a>
+
+    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+
+        <mat-icon>notifications</mat-icon>
+
+      </button>
+
+      <mat-menu #menu="matMenu" class="menu-conatiner">
+
+        <button mat-menu-item *ngFor="let notification of notifications" class="button-container">
+         
+          <span>{{notification.name}}</span>
+
+        </button>
+        
+      </mat-menu>
+  
+    
+</mat-toolbar>
+
+
+<router-outlet></router-outlet>
+

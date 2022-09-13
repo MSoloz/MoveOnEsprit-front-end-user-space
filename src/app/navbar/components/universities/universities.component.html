@@ -1,0 +1,56 @@
+<div class = "content">
+
+    <div fxLayout="row wrap" fxLayoutGap="16px grid">
+
+        <div fxFlex ="25%" *ngFor =" let item of universities | paginate :{id:'listing_pagination',
+        itemsPerPage:12,
+        currentPage:page}">
+
+
+<mat-card  class="mat-elevation-z4">
+
+
+    <mat-card-header>
+
+        <mat-card-title>{{item.name}}</mat-card-title>
+
+      </mat-card-header>
+    
+      <img class="example-image" mat-card-image src="{{apiServerUrl}}/img/{{item.image}}">
+
+      <mat-card-content>
+        <p>
+          Hi, welcome to programming! If you've never learned to program before, you might be wondering what programming actually is. Wel...
+        </p>
+      </mat-card-content>
+    
+
+      <mat-card-actions>
+
+     <button mat-button routerLink="/MoveOnEsprit/home/details/{{item.id}}">Show</button>
+
+
+      </mat-card-actions>
+    
+    
+
+
+
+</mat-card>
+
+
+</div>
+
+</div>
+
+<div class="pagination_container">
+
+  <pagination-controls id ='listing_pagination' (pageChange)="page = $event" ></pagination-controls>
+  
+  </div>
+
+
+</div>
+
+<router-outlet></router-outlet>
+
