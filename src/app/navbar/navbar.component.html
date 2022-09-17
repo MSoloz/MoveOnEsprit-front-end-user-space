@@ -8,7 +8,7 @@
     <a mat-button routerLink="universities">Universities</a>
     <a mat-button routerLink="contacts">Contacts</a>
 
-    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+    <button mat-icon-button [matMenuTriggerFor]="menu"  (click)="Refrech()">
 
         <mat-icon>notifications</mat-icon>
 
@@ -18,7 +18,7 @@
 
         <button mat-menu-item *ngFor="let notification of notifications" class="button-container">
          
-          <span>{{notification.name}}</span>
+          <span>{{notification.message}}</span>
 
         </button>
         

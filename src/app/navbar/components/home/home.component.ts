@@ -20,15 +20,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.postService.getPosts().subscribe( (res:any)=>{
-
-   this.posts = res;
-
-
-    })
-
-
-
+    this.postService.getAllPosts().subscribe( res =>this.posts = res );
 
 
   }

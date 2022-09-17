@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { UniversityService } from '../services/university.service';
+import { NotificationService } from '../services/notification.service';
+
 
 @Component({
   selector: 'app-navbar',
@@ -11,14 +12,21 @@ export class NavbarComponent implements OnInit {
 
    notifications :any = [];
 
+   id:any;
 
-  constructor(private universityService: UniversityService) { }
+  constructor(private notificationService: NotificationService) { }
 
   ngOnInit(): void {
 
-   this.universityService.getUniversities().subscribe((res:any) => { this.notifications = res});
+    this.id = localStorage.getItem('userId');
 
+   this.notificationService.getNotificationByUserId(this.id).subscribe(res =>  this.notifications = res);
 
+  }
+
+  Refrech(){
+
+    this.ngOnInit();
 
   }
 

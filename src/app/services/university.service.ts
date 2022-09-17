@@ -17,27 +17,27 @@ export class UniversityService {
 
 
 
-  getUniversities() { 
+  getAllUniversities() { 
 
     return this.http.get(`${this.apiServerUrl}/university/all`);
   
   }
 
 
- getUniversity(id:any) {  
+ getUniversityById(id:any) {  
   
   return this.http.get(`${this.apiServerUrl}/university/details/`+id);
 
-     }
+  }
 
 
-     applyToUniverity(id1:any,id2:any ):Observable<any>{
+  applyToUniverity(id1:any,id2:any ):Observable<any>{
 
 
       return this.http.post(`${this.apiServerUrl}/candidate/create/`+ id1 +'/'+ id2,null);
   
   
-      }
+  }
 
 
 

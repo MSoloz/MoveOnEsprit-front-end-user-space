@@ -17,7 +17,7 @@ export class ContactsComponent implements OnInit {
 
   ngOnInit(): void {
 
-  this.managerService.getManager().subscribe( res => {this.manager = res });
+  this.managerService.getManager().subscribe( res => this.manager = res );
 
   }
 

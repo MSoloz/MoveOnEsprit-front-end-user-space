@@ -13,14 +13,14 @@ export class PostService {
   constructor(private http: HttpClient) { }
 
   
-  getPosts() { 
+  getAllPosts() { 
 
     return this.http.get(`${this.apiServerUrl}/post/all`);
   
   }
 
 
- getPost(id:any) {  
+ getPostById(id:any) {  
 
   return this.http.get(`${this.apiServerUrl}/post/details/`+id);
 

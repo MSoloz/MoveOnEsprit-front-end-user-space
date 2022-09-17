@@ -6,14 +6,10 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { NavbarComponent } from './navbar/navbar.component';
-import { DetailsComponent } from './navbar/components/details/details.component';
 import { HomeComponent } from './navbar/components/home/home.component';
 import { ContactsComponent } from './navbar/components/contacts/contacts.component';
 
 import { LoggerModule, NgxLoggerLevel } from "ngx-logger";
-import { DialogComponent } from './navbar/components/dialog/dialog.component';
-
-
 import { UniversitiesComponent } from './navbar/components/universities/universities.component';
 import { LoginComponent } from './login/login.component';
 
@@ -33,19 +29,17 @@ import {MatListModule} from '@angular/material/list';
 import {MatTableModule} from '@angular/material/table';
 import {MatMenuModule} from '@angular/material/menu';
 import {NgxPaginationModule} from 'ngx-pagination';
+import { UniversityDetailsComponent } from './navbar/components/university-details/university-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     NavbarComponent,
-    DetailsComponent,
     HomeComponent,
     ContactsComponent,
-
-    DialogComponent,
-    
-     UniversitiesComponent
+    UniversitiesComponent,
+    UniversityDetailsComponent
   ],
   imports: [
     BrowserModule,

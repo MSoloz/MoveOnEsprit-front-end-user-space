@@ -9,7 +9,7 @@ import { environment } from 'src/environments/environment';
 })
 export class UniversitiesComponent implements OnInit {
 
-   apiServerUrl = environment.apiBaseUrl;
+  apiServerUrl = environment.apiBaseUrl;
   
   universities : any = [];
 
@@ -19,13 +19,7 @@ export class UniversitiesComponent implements OnInit {
 
   ngOnInit(): void {
 
-    
-    this.universityService.getUniversities().subscribe( (res:any)=>{
-
-      this.universities = res;
-   
-   
-       });
+    this.universityService.getAllUniversities().subscribe( res => this.universities = res);
   }
 
 }
